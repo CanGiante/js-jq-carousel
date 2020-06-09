@@ -33,20 +33,20 @@ function mostraImgSuccessiva() {
   var circleCorrente = $(".nav i.active");
 
   //gli rimuovo la classe
-  imgCorrente.removeClass("active");
+  imgCorrente.hide().removeClass("active");
   circleCorrente.removeClass("active");
 
   //la aggiungo a chi mi pare
   if (imgCorrente.hasClass("last")) {
     //se sto sull'ultimo fratello
     //al primo
-    $(".images img.first").addClass("active");
+    $(".images img.first").fadeIn(500).addClass("active");
     $(".nav i.first").addClass("active");
 
   } else {
     //altrimenti
     //al fratello successivo
-    imgCorrente.next().addClass("active");
+    imgCorrente.next().fadeIn(500).addClass("active");
     circleCorrente.next().addClass("active");
 
   }
@@ -63,20 +63,20 @@ function mostraImgPrecedente() {
   var circleCorrente = $(".nav i.active");
 
   //gli rimuovo la classe
-  imgCorrente.removeClass("active");
+  imgCorrente.hide().removeClass("active");
   circleCorrente.removeClass("active");
 
   //la aggiungo a chi mi pare
   if (imgCorrente.hasClass("first")) {
     //se sto sul primo fratello
     //all'ultimo
-    $(".images img.last").addClass("active");
+    $(".images img.last").fadeIn(500).addClass("active");
     $(".nav i.last").addClass("active");
 
   } else {
     //altrimenti
     //al fratello precedente
-    imgCorrente.prev().addClass("active");
+    imgCorrente.prev().fadeIn(500).addClass("active");
     circleCorrente.prev().addClass("active");
 
   }
